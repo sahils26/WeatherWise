@@ -1,0 +1,46 @@
+.template {
+  background-image: linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5) ), url('./Components/Assets/rain-6243559_1920.jpg');
+  background-size: cover; 
+  height: 85vh;
+  width: 85vw;
+  background-repeat: no-repeat;
+
+
+}
+
+
+.mainbg{
+  background-image: linear-gradient( rgba(0,0,0,0.95), rgba(0,0,0,0.95) ),url('./Components/Assets/rain-6243559_1920.jpg');
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+
+}
+
+
+.beautiful-loader {
+  margin: 20px auto;
+  width: 200px;
+  height: 170px;
+  border-radius: 80%;
+  background: linear-gradient(45deg, #499ec87e, #f4c36d30);
+  animation: rotate 1.5s infinite , fadeOut 0.5s ease-out;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
