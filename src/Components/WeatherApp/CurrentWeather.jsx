@@ -94,39 +94,41 @@ export const CurrentWeather = () => {
               Loading...
             </div>
           ) : (
-            <div className="flex flex-col items-center m-2 justify-between ">
-              <div className="lg:min-w-[500px]  m-4 relative ">
-                <h1 className="text-3xl font-extrabold text-slate-300 m-2 absolute -top-16">
+            <div className="flex flex-col items-center  ">
+              <div className="min-w-full border-4 h-12 flex items-center justify-center text-gray-400 overline">
+                <h1 className="md:text-3xl font-extrabold text-gray-400 m-2 underline  ">
                   ------Weather Wise------
                 </h1>
-                <div className="min-w-[1000px] font-mono">
-                  <h1 className="text-4xl font-bold text-white font-mono ">
+              </div> 
+              <div className="md:min-w-[500px]  m-4 relative ">
+                <div className="min-w-[1000px] font-mono flex flex-col items-center ">
+                  <h1 className="md:text-4xl font-bold text-white font-mono text-2xl ">
                     {currentWeather.name}, {currentWeather.sys.country}
                   </h1>
-                  <div className="flex items-center justify-between">
-                    <p className="text-5xl text-white font-bold font-mono ">
+                  <div className="flex items-center justify-center">
+                    <p className="md:text-5xl text-white font-bold font-mono text-xl">
                       {Math.round(currentWeather.main.temp - 273.15)}°C
                     </p>
                     <div className="flex flex-col items-center justify-center px-3">
-                      <p className="text-7xl text-white">  
+                      <p className="md:text-7xl text-white text-2xl ">  
                         {getWeatherIcon(currentWeather.weather[0].icon)}
                       </p>
-                        <p className="text-slate-200 italic">~{currentWeather.weather[0].description}</p>
+                        <p className="text-slate-200 italic text-md">~{currentWeather.weather[0].description}</p>
                     </div>
                   </div>
                 </div>
 
                 <div className="flex items-center justify-center font-mono">
-                  <div className="mt-4 transition-all bg-black bg-opacity-40 p-5 min-w-full flex rounded-2xl justify-between ">
-                    <p className="text-xl font-semibold text-slate-200 transition-all p-1 flex flex-col items-center">
+                  <div className=" transition-all bg-black bg-opacity-40 md:p-4   md:min-w-full sm:min-w-96 flex rounded-2xl justify-between gap-2">
+                    <p className="md:text-xl font-semibold text-slate-200 transition-all p-1 flex flex-col items-center ">
                       Humidity:
                       <div className="p-1">{currentWeather.main.humidity}%</div>
                     </p>
-                    <p className="text-xl font-semibold text-slate-200 transition-all p-1 flex flex-col items-center">
+                    <p className="md:text-xl font-semibold text-slate-200 transition-all p-1 flex flex-col items-center">
                       Wind:
                       <div className="p-1">{currentWeather.wind.speed} m/s</div>
                     </p>
-                    <p className="text-xl font-semibold text-slate-200 transition-all p-1 flex flex-col items-center">
+                    <p className="md:text-xl font-semibold text-slate-200 transition-all p-1 flex flex-col items-center ">
                       Feels like:
                       <div className="p-1">
                         {Math.round(currentWeather.main.feels_like - 273.15)}°C

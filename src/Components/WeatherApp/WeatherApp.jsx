@@ -69,7 +69,7 @@ export const WeatherApp = () => {
 
   return (
     <div>
-      <div className=" lg:max-w-[500px] mb-12">
+      <div className="lg:max-w-[500px] mb-12 mx-4">
         <div className="mb-4">
           <label
             htmlFor="city"
@@ -89,44 +89,49 @@ export const WeatherApp = () => {
 
         {weather && (
           <div>
-            <h2 className="text-xl text-slate-100 font-semibold ">
+            <h2 className="md:text-xl text-slate-100 font-semibold text-lg">
               {weather.name}, {weather.sys.country}
             </h2>
-            <p className="text-slate-100 px-1">{weather.weather[0].description}</p>
+            <p className="text-slate-100 px-1 italic">{weather.weather[0].description}</p>
           </div>
         )}
 
         {weather && (
-          <div className=" transition-all bg-black bg-opacity-60 p-1 min-w-96 min-h-80 flex rounded-full justify-between flex-col items-center border-t-4 border-gradient-t-dark-blue-to-black mx-4 shadow-black shadow-2xl">
-            <p className="text-4xl text-slate-300 font-bold p-2">
+          <div className="transition-all bg-black bg-opacity-60 p-1 max-w-80 min-h-80 flex rounded-full justify-between flex-col  items-center border-t-4 border-gradient-t-dark-blue-to-black shadow-black shadow-2xl">
+            <p className="md:text-4xl text-slate-300 font-bold text-2xl pt-6">
               {Math.round(weather.main.temp - 273.15)}°C
             </p>
 
-            <div className="flex ">
-              <p className="text-lg font-semibold text-slate-300 transition-all p-2 flex flex-col items-center">
-                Humidity:
-                <div className="p-2">{weather.main.humidity}%</div>
+            <div className="flex flex-col md:flex-row justify-between">
+              <p className="md:text-lg font-semibold text-slate-300 transition-all md:p-4 flex flex-col items-center">
+                <div>Humidity:</div>
+                <div className="p-1">{weather.main.humidity}%</div>
               </p>
-              <div className="text-7xl p-2 text-white ">
-                {getWeatherIcon(weather.weather[0].icon)}
+              <div className="md:text-7xl p-2 text-white mx-auto text-5xl">
+                <div>{getWeatherIcon(weather.weather[0].icon)}</div>
               </div>
-              <p className="text-lg font-semibold text-slate-300 transition-all p-2 flex flex-col items-center">
-                Wind:
-                <div className="p-1">{weather.wind.speed} m/s</div>
+              <p className="md:text-lg font-semibold text-slate-300 transition-all md:p-4 flex flex-col items-center">
+                <div>Wind:</div>
+                <div className="p-1">{weather.wind.speed}m/s</div>
               </p>
             </div>
 
-            <p className="text-lg font-semibold text-slate-300 transition-all p-2 flex flex-col items-center">
+            <p className="text-lg pb-6 font-semibold text-slate-300 transition-all flex items-center">
               Feels like:
-              <div className="">
+              <div className="p-1">
                 {Math.round(weather.main.feels_like - 273.15)}°C
               </div>
             </p>
           </div>
-
-        
         )}
-      </div>
+      </div> 
+
+
+
+
+
+
+
     </div>
   );
 };
