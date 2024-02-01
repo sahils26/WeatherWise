@@ -97,7 +97,7 @@ export const WeatherApp = () => {
         )}
 
         {weather && (
-          <div className="transition-all bg-black bg-opacity-60 p-1 max-w-80 min-h-80 flex rounded-full justify-between flex-col  items-center border-t-4 border-gradient-t-dark-blue-to-black shadow-black shadow-2xl">
+          <div className="transition-all bg-black bg-opacity-60 p-1 max-w-80 min-h-80 flex rounded-full justify-between flex-col  items-center border-t-4 border-gradient-t-dark-blue-to-black shadow-black shadow-lg">
             <p className="md:text-4xl text-slate-300 font-bold text-2xl pt-6">
               {Math.round(weather.main.temp - 273.15)}°C
             </p>

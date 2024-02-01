@@ -95,10 +95,12 @@ export const CurrentWeather = () => {
             </div>
           ) : (
             <div className="flex flex-col items-center  ">
-              <div className="min-w-full border-4 h-12 flex items-center justify-center text-gray-400 overline">
-                <h1 className="md:text-3xl font-extrabold text-gray-400 m-2 underline  ">
-                  ------Weather Wise------
+              <div className="min-w-full h-12 flex  items-center justify-center text-gray-400 ">
+                  <div className="blur-md text-3xl font-bold">|||||||||||||||||||||||||||</div>
+                <h1 className="md:text-3xl font-extrabold text-gray-400 m-2 underline ">
+                  Weather Wise
                 </h1>
+                  <div className="blur-md text-3xl font-bold">|||||||||||||||||||||||||||</div>
               </div> 
               <div className="md:min-w-[500px]  m-4 relative ">
                 <div className="min-w-[1000px] font-mono flex flex-col items-center ">
@@ -119,7 +121,7 @@ export const CurrentWeather = () => {
                 </div>
 
                 <div className="flex items-center justify-center font-mono">
-                  <div className=" transition-all bg-black bg-opacity-40 md:p-4   md:min-w-full sm:min-w-96 flex rounded-2xl justify-between gap-2">
+                  <div className=" transition-all bg-black bg-opacity-40 md:p-4   md:min-w-full sm:min-w-96 flex rounded-2xl justify-between gap-2 shadow-black shadow-2xl">
                     <p className="md:text-xl font-semibold text-slate-200 transition-all p-1 flex flex-col items-center ">
                       Humidity:
                       <div className="p-1">{currentWeather.main.humidity}%</div>
